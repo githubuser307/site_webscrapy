@@ -1,0 +1,10 @@
+{% extends 'appscrapy/base_appscrapy.html' %}
+{% block title %}
+    Site detail - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<h1 class="mt-5">
+        name: {{ site.name }}
+</h1>
+{% endblock %}

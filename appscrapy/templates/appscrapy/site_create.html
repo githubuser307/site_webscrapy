@@ -1,0 +1,16 @@
+{% extends 'appscrapy/base_appscrapy.html' %}
+
+{% block title %}
+Site create - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'site_create_url' %}" method="post">
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.start_url }}
+        {{ form.description }}
+
+        <button type="submit" class="btn btn-primary">Create Site</button>
+
+{% endblock %}

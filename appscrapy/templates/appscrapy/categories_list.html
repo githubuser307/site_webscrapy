@@ -1,0 +1,16 @@
+{% extends 'appscrapy/base_appscrapy.html' %}
+
+{% block title %}
+Categories list - {{ block.super }}
+{%  endblock %}
+
+{% block content %}
+    <h1 class="mb-5">Categories:</h1>
+{% for category in categories %}
+    <div class="card mb-4">
+    {{ category }}
+    </div>
+
+{% endfor %}
+
+{% endblock %}

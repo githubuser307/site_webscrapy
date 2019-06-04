@@ -1,0 +1,34 @@
+{% extends 'appscrapy/base_appscrapy.html' %}
+
+{% block title %}
+Jobs list
+{%  endblock %}
+
+{% block content %}
+    <h1 class="mb-5">Jobs:</h1>
+{% for job in jobs %}
+    <div class="card mb-4">
+  <div class="card-header">
+    {{ job.date_create }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ job.slug }}</h5>
+    <p class="card-text">
+        user_id: {{ job.user_id }}
+        throtling: {{ job.throtling }}
+        numThread: {{ job.numThread }}
+        proxy: {{ job.proxy }}
+        site:{{ job.site }}
+        category: {{ job.category }}
+        date_start:{{ job.date_start }}
+        date_end: {{ job.date_end }}
+        state: {{ job.state }}
+        comment: {{ comment }}
+    </p>
+    <a href="{{ job.get_absolute_url }}" class="btn btn-primary">View</a>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

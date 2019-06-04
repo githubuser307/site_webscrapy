@@ -1,0 +1,14 @@
+{% extends 'appscrapy/base_appscrapy.html' %}
+
+{% block title %}
+    Job create - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'job_create_url' %}" method="post">
+        {% csrf_token %}
+
+        <button type="submit" class="btn btn-primary">Create Job</button>
+
+    </form>
+{% endblock %}

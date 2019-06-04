@@ -1,0 +1,19 @@
+{% extends 'appscrapy/base_appscrapy.html' %}
+{% block title %}
+    {{ job.slug }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<h1 class="mt-5">
+        user_id: {{ job.user_id }}
+        throtling: {{ job.throtling }}
+        numThread: {{ job.numThread }}
+        proxy: {{ job.proxy }}
+        site:{{ job.site }}
+        category: {{ job.category }}
+        date_start:{{ job.date_start }}
+        date_end: {{ job.date_end }}
+        state: {{ job.state }}
+        comment: {{ comment }}
+</h1>
+{% endblock %}
